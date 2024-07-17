@@ -1,32 +1,27 @@
-# terraform-gcp-vm
-deploy instances in google cloud platform
-
-# Optimizing Test Environments with GCP Spot Instances
-
-Recently, I needed to set up a testing environment to evaluate an automation tool. It was crucial to have an instance that I could easily manage, allowing me to start, stop, or delete it without incurring high costs.
-I opted to use a GCP spot instance because it offers an affordable cost and meets my requirements.
+# Deploy Cost-Effective Spot Instances for Testing Environments in GCP with Terraform
 
 ### Objectives
 
-- **Implementing Infrastructure as Code with Terraform**: Using Terraform to manage and automate the creation and configuration of infrastructure.
-- **Deploying a Customized Instance**: Creating a VM instance tailored to the specific needs of the testing environment, with necessary features and configurations.
-- **Optimizing Tool and Application Installation**: Identifying and applying the best strategy to pre-install all required tools and applications from the outset.
-- **Streamlining Instance Removal**: Ensuring easy removal of the instance once it has served its purpose, optimizing resource usage and minimizing costs.
+- **Infrastructure as Code with Terraform**: Automate the creation and configuration of infrastructure.
+- **Custom VM Deployment**: Set up a VM instance tailored for testing with the required features.
+- **Tool and Application Installation**: Pre-install all necessary tools and applications efficiently.
+- **Instance Removal**: Ensure easy removal of the instance to optimize resource usage and minimize costs.
 
-# What is a spot instance?
-Spot instances are a type of virtual machine instance offered by cloud service providers such as Amazon Web Services (AWS), Google Cloud Platform (GCP), and Microsoft Azure at a lower price compared to on-demand instances. The key characteristics of spot instances include:
+### What is a Spot Instance?
 
-1. **Cost Savings**: Spot instances can be significantly cheaper than on-demand instances, often by **70-90%.**
-2. **Availability**: The availability of spot instances can vary based on demand and supply within the cloud provider's data centers. They are ideal for workloads that can be interrupted and are flexible in terms of timing.
-3. **Interruption**: Cloud providers can reclaim spot instances with short notice (e.g., AWS gives a two-minute warning). This makes them suitable for fault-tolerant applications and workloads that can handle interruptions, such as batch processing, big data analysis, and distributed computing.
-4. **Use Cases**: Spot instances are commonly used for applications like big data processing, scientific computing, image and video rendering, financial modeling, and other high-performance computing tasks.
-5. **Bidding and Pricing**: The pricing of spot instances can fluctuate based on supply and demand. In some cases, users can set a maximum price they're willing to pay, and instances are provided when the market price is below that threshold.
-6. **Integration**: Spot instances can be integrated with other services and tools provided by the cloud platform, such as auto-scaling groups, container orchestration, and more.
+Spot instances are low-cost virtual machines offered by cloud providers like GCP, AWS, and Azure. They are ideal for fault-tolerant workloads and can be significantly cheaper than on-demand instances.
 
-Would you like to know more about how to use spot instances with a specific cloud provider?
+**Key Features:**
+- **Cost Savings**: Up to 70-90% cheaper than on-demand instances.
+- **Variable Availability**: Based on demand and supply.
+- **Interruption Notice**: Short notice reclaim by the provider (e.g., 2-minute warning).
+- **Ideal Use Cases**: Batch processing, big data analysis, scientific computing, rendering, financial modeling, and more.
+- **Pricing and Bidding**: Fluctuates based on market conditions, with the option to set a maximum price.
+- **Service Integration**: Compatible with auto-scaling, container orchestration, etc.
 
-The structure of my terraform directory is as follows:
+### Directory Structure
 
+```plaintext
 terraform-gcp-vm/
 ├── provider.tf
 ├── variables.tf
@@ -34,5 +29,6 @@ terraform-gcp-vm/
 ├── output.tf
 └── configs/
     └── startup.sh
+```
 
 ... Working on it!
