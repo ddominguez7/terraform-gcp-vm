@@ -1,25 +1,21 @@
 variable "project" {
   description = "The GCP project ID to deploy resources into."
   type        = string
-  default     = "your-project-id"
 }
 
 variable "region" {
   description = "The GCP region to deploy resources into."
   type        = string
-  default     = "us-east1"
 }
 
 variable "zone" {
   description = "The GCP zone within the specified region to deploy resources into."
   type        = string
-  default     = "us-east1-b"
 }
 
 variable "GOOGLE_CREDENTIALS" {
   description = "The JSON key file content for the GCP service account."
   type        = string
-
 }
 
 variable "vm" {
